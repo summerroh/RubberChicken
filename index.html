@@ -37,8 +37,12 @@
         background-color: #864cbf
     }
 }
-
+        html {
+          height: 100%;
+        }
         body {
+          height: 100%;
+          margin: 0;
             -webkit-animation: bgcolor 20s infinite;
             animation: bgcolor 10s infinite;
             -webkit-animation-direction: alternate;
@@ -48,8 +52,18 @@
         .container {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            /* align-items: center; */
             justify-content: center;
+            flex-wrap: wrap;
+            height: 100%;
+
+            
+            
+            
+        }
+        .container > div {
+          /* flex: 1; */
+          /* overflow: auto; */
         }
     
         .image {
@@ -162,7 +176,7 @@
         .title{
             margin-top: 23px;
         }
-        footer{
+        .createdby{
             margin-bottom: 30px;
         }
         .addthis_inline_share_toolbox {
@@ -173,7 +187,6 @@
 </head>
 
 <body>
-   
     <div class='container'>
         <div class='title'>
             <h1>Click Me!</h1>
@@ -182,13 +195,16 @@
         <div class='chicken'>
             <img class= 'image bouncy' src="chicken_image.png" alt="rubber_chicken" onclick="play()">
         </div>
-        
-        <p>Share Me!</p>
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="addthis_inline_share_toolbox"></div>
-            
-        
-        <audio class="audio" src="1.mp3"></audio>
+        <div> 
+          <p>Share Me!</p>
+           <!-- Go to www.addthis.com/dashboard to customize your tools -->
+           <div class="addthis_inline_share_toolbox"></div>
+        </div>
+        <div class=createdby>
+          <p>created by @summer_roh</p>
+        </div>
+    </div>
+    <audio class="audio" src="1.mp3"></audio>
         <audio class="audio" src="2.mp3"></audio>
         <audio class="audio" src="3.mp3"></audio>
         <audio class="audio" src="4.mp3"></audio>
@@ -200,20 +216,11 @@
         <audio class="audio" src="11.mp3"></audio>
         <audio class="audio" src="12.mp3"></audio>
         <audio class="audio" src="13.mp3"></audio>
-        <audio class="audio" src="14.mp3"></audio>       <audio class="audio" src="15.mp3"></audio>
-
-    </div>
-    
-        
-            
-    <footer>
-        <p>created by @summer_roh</p>
-    </footer>
+        <audio class="audio" src="14.mp3"></audio>       
+        <audio class="audio" src="15.mp3"></audio>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ea5171188f0474e"></script>
-
-
-</body>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ea5171188f0474e"></script>
+  </body>
     <script>
         var audio = document.querySelectorAll(".audio");
         var image = document.querySelector(".image");
@@ -235,7 +242,5 @@
             randomAudio.currentTime=0;
           }
     </script>
-    
-    
     
 </html>
