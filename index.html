@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    
+
+    <title>Rubber Chicken</title>
+    
+    <style>
+        * {
+            color: white;
+            text-align: center;
+/*            overflow:hidden;*/
+            font-family: 'Fredoka One', cursive;
+            padding: 0;
+            margin: 0;
+        }
+    
+        @keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+    30% {
+        background-color: #00cc99
+    }
+    60% {
+        background-color: #ff9933
+    }
+    90% {
+        background-color: #f35
+    }
+    100% {
+        background-color: #864cbf
+    }
+}
+
+        body {
+            -webkit-animation: bgcolor 20s infinite;
+            animation: bgcolor 10s infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .image {
+            height: 450px;
+        }
+        .bouncy{
+            animation:bouncy 4s infinite linear;
+            position:relative;
+        }
+        @keyframes bouncy {
+             0%{top:0em}
+             40%{top:0em}
+             43%{top:-0.9em}
+             46%{top:0em}
+             48%{top:-0.4em}
+             50%{top:0em}
+             100%{top:0em;}
+        }
+        /* rubberband animation */
+        /*!
+         * animate.css -https://daneden.github.io/animate.css/
+         * Version - 3.7.2
+         * Licensed under the MIT license - http://opensource.org/licenses/MIT
+         *
+         * Copyright (c) 2019 Daniel Eden
+         */
+            @-webkit-keyframes rubberBand {
+          from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+
+          30% {
+            -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+          }
+
+          40% {
+            -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+          }
+
+          50% {
+            -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+          }
+
+          65% {
+            -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+          }
+
+          75% {
+            -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+          }
+
+          to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+        }
+
+        @keyframes rubberBand {
+          from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+
+          30% {
+            -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+          }
+
+          40% {
+            -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+          }
+
+          50% {
+            -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+          }
+
+          65% {
+            -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+          }
+
+          75% {
+            -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+          }
+
+          to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+        }
+
+        .rubberBand {
+          -webkit-animation-name: rubberBand;
+          animation-name: rubberBand;
+            animation:rubberBand 1s linear;
+        }
+        
+        h1{
+            font-size: 40px;
+        }
+        .title{
+            margin-top: 23px;
+        }
+        footer{
+            margin-bottom: 30px;
+        }
+        .addthis_inline_share_toolbox {
+            margin: 10px 0 10px 0;
+        }
+    </style>
+    
+</head>
+
+<body>
+   
+    <div class='container'>
+        <div class='title'>
+            <h1>Click Me!</h1>
+        </div>
+        
+        <div class='chicken'>
+            <img class= 'image bouncy' src="chicken_image.png" alt="rubber_chicken" onclick="play()">
+        </div>
+        
+        <p>Share Me!</p>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+        
+        <audio class="audio" src="1.mp3"></audio>
+        <audio class="audio" src="2.mp3"></audio>
+        <audio class="audio" src="3.mp3"></audio>
+        <audio class="audio" src="4.mp3"></audio>
+        <audio class="audio" src="5.mp3"></audio>
+        <audio class="audio" src="7.mp3"></audio>
+        <audio class="audio" src="8.mp3"></audio>
+        <audio class="audio" src="9.mp3"></audio>
+        <audio class="audio" src="10.mp3"></audio>
+        <audio class="audio" src="11.mp3"></audio>
+        <audio class="audio" src="12.mp3"></audio>
+        <audio class="audio" src="13.mp3"></audio>
+        <audio class="audio" src="14.mp3"></audio>       <audio class="audio" src="15.mp3"></audio>
+
+    </div>
+    
+        
+            
+    <footer>
+        <p>created by @summer_roh</p>
+    </footer>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ea5171188f0474e"></script>
+
+
+</body>
+    <script>
+        var audio = document.querySelectorAll(".audio");
+        var image = document.querySelector(".image");
+        var randomAudio
+        
+        function play() {
+            if (randomAudio) {
+                randomAudio.pause();
+                randomAudio.currentTime = 0;
+                image.classList.remove('rubberBand');
+                void image.offsetWidth;
+            };
+            
+            console.log(image);
+            image.classList.add('rubberBand');
+            randomAudio = audio[Math.floor(Math.random()*audio.length)];
+            randomAudio.volume = 1;
+            randomAudio.play();
+            randomAudio.currentTime=0;
+          }
+    </script>
+    
+    
+    
+</html>
